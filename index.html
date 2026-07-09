@@ -1,0 +1,3179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakshatra Sane · Luxury Brand Strategy</title>
+    <meta name="description" content="MSc Luxury Marketing · NEOMA Business School · Brand Strategy and Digital Communication for Luxury Houses · Available for internship, Paris 2026">
+    <meta name="keywords" content="Nakshatra Sane, Luxury Marketing, NEOMA, Paris, Brand Strategy, Beauty, Perfume, Accessories, Internship">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <style>
+
+        /* ===========================
+           RESET & BASE
+        =========================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --parchment:      #FAF7F2;
+            --parchment-dark: #EDE8DE;
+            --espresso:       #1A0508;
+            --espresso-mid:   #2E0A10;
+            --gold:           #8B1A2A;
+            --gold-light:     #B04055;
+            --gold-pale:      #F2E0E3;
+            --text-dark:      #1A0608;
+            --text-muted:     #6B4A50;
+            --text-light:     #A08090;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--parchment);
+            color: var(--text-dark);
+            font-size: 17px;
+            line-height: 1.65;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            line-height: 1.15;
+        }
+
+        em { font-style: italic; }
+
+
+        /* ===========================
+           NAVIGATION
+        =========================== */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 1.4rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 247, 242, 0.94);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 26, 42, 0.18);
+            transition: padding 0.3s;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            color: var(--espresso);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        .nav-cta {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 1px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-cta:hover { opacity: 0.65; }
+
+
+        /* ===========================
+           SECTION BASE
+        =========================== */
+        section { padding: 6rem 3rem; }
+
+        .section-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+        }
+
+
+        /* ===========================
+           HERO
+        =========================== */
+        #hero {
+            min-height: 100vh;
+            background-color: var(--espresso);
+            padding: 0 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 5.5rem;
+            padding-top: 7rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: -15%;
+            right: -8%;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139,26,42,0.07) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(139,26,42,0.3), transparent);
+        }
+
+        .hero-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 5rem;
+            align-items: flex-start;
+        }
+
+        .hero-portrait {
+            position: relative;
+            flex-shrink: 0;
+            z-index: 20;
+        }
+
+        .hero-portrait img {
+            width: 100%;
+            height: clamp(260px, 36vw, 360px);
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 0 8px 40px rgba(26,5,8,0.22);
+        }
+
+        .hero-portrait-caption {
+            font-size: 0.6rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(250,247,242,0.4);
+            margin-top: 0.8rem;
+            text-align: right;
+        }
+
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-portrait { display: none; }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: rgba(250, 247, 242, 0.08);
+            border: 1px solid rgba(250, 247, 242, 0.25);
+            color: rgba(250, 247, 242, 0.9);
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 0.45rem 1.1rem;
+            border-radius: 2px;
+            margin-bottom: 2.8rem;
+        }
+
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(250, 247, 242, 0.9);
+            animation: pulse-dot 2.2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.25; transform: scale(0.7); }
+        }
+
+        .hero-name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3.8rem, 9vw, 7.5rem);
+            font-weight: 400;
+            color: var(--parchment);
+            line-height: 1;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-name em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1rem, 1.8vw, 1.25rem);
+            color: rgba(250, 247, 242, 0.82);
+            font-weight: 300;
+            max-width: 520px;
+            line-height: 1.75;
+            margin-bottom: 0;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(139,26,42,0.18);
+        }
+
+        .hero-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            padding-right: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-meta-label {
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(250, 247, 242, 0.5);
+        }
+
+        .hero-meta-value {
+            font-size: 0.88rem;
+            color: rgba(250, 247, 242, 0.85);
+            font-weight: 300;
+        }
+
+
+        /* ===========================
+           ABOUT
+        =========================== */
+        #about { background: var(--parchment); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .about-photo-wrap {
+            position: relative;
+        }
+
+        .about-photo {
+            aspect-ratio: 3/4;
+            background: var(--parchment-dark);
+            border: 1px solid rgba(139,26,42,0.2);
+            overflow: hidden;
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .about-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .about-photo-placeholder svg {
+            opacity: 0.25;
+        }
+
+        .about-photo-caption {
+            margin-top: 0.8rem;
+            font-size: 0.68rem;
+            color: var(--text-light);
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--espresso);
+            margin-bottom: 1.8rem;
+        }
+
+        .about-content p {
+            font-size: 0.97rem;
+            color: var(--text-muted);
+            line-height: 1.9;
+            margin-bottom: 1.3rem;
+        }
+
+        .about-content p:last-of-type { margin-bottom: 0; }
+
+        .about-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-tag {
+            font-size: 0.68rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(139,26,42,0.3);
+            padding: 0.35rem 0.85rem;
+            border-radius: 1px;
+        }
+
+
+        /* ===========================
+           WORK / PROJECTS
+        =========================== */
+        #work {
+            background: var(--espresso);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Work section header */
+        .work-header {
+            padding: 6rem 3rem 2.5rem;
+        }
+
+        #work .section-label { color: var(--gold); }
+
+        .work-big-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(5rem, 14vw, 11rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--parchment);
+            line-height: 0.9;
+            margin: 1rem 0 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .work-scroll-cue {
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(250,247,242,0.4);
+            display: block;
+            margin-bottom: 0;
+        }
+
+        /* Horizontal scroll strip */
+        .work-scroll-wrap {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 2rem 3rem 5rem;
+            cursor: grab;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .work-scroll-wrap::-webkit-scrollbar { display: none; }
+        .work-scroll-wrap.is-dragging { cursor: grabbing; user-select: none; }
+
+        .work-scroll-track {
+            display: flex;
+            gap: 1.4rem;
+            width: max-content;
+        }
+
+        .work-hcard {
+            width: 310px;
+            flex-shrink: 0;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-hcard-visual {
+            height: 420px;
+            border-radius: 2px;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            padding: 1.4rem;
+            overflow: hidden;
+            transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .work-hcard:hover .work-hcard-visual { transform: scale(1.025); }
+
+        /* Brand colour backgrounds */
+        .mkf-bg       { background: #0c1e30; }
+        .dior-bg      { background: #1a1a1a; }
+        .boucheron-bg { background: #0e2318; }
+        .jacquemus-bg { background: #7a3020; }
+        .loreal-bg    { background: #2a1808; }
+
+        .work-hcard-num {
+            font-size: 0.6rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(250,247,242,0.45);
+            background: rgba(0,0,0,0.35);
+            padding: 0.3rem 0.75rem;
+            border-radius: 2px;
+            backdrop-filter: blur(4px);
+        }
+
+        .work-hcard-meta {
+            padding: 1.1rem 0 1rem;
+            border-bottom: 1px solid rgba(250,247,242,0.08);
+        }
+
+        .work-hcard-house {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--parchment);
+            line-height: 1.3;
+            margin-bottom: 0.35rem;
+        }
+
+        .work-hcard-type {
+            font-size: 0.62rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+        }
+
+        @media (max-width: 900px) {
+            .work-big-heading { font-size: clamp(3.5rem, 12vw, 6rem); }
+            .work-scroll-wrap { padding: 1.5rem 1.5rem 4rem; }
+            .work-header { padding: 5rem 1.5rem 2rem; }
+            .work-hcard { width: 260px; }
+            .work-hcard-visual { height: 340px; }
+        }
+
+        /* keep old heading rule for other sections */
+        #work > .section-inner > h2 {
+            color: var(--parchment);
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            margin-bottom: 3.5rem;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+            position: relative;
+        }
+
+        /* Card base */
+        .work-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(139,26,42,0.14);
+            padding: 2.2rem;
+            cursor: pointer;
+            transition: border-color 0.3s, background 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .work-card:hover {
+            border-color: rgba(139,26,42,0.38);
+            background: rgba(255,255,255,0.065);
+            transform: translateY(-3px);
+        }
+
+        .work-card:hover::after { transform: scaleX(1); }
+
+        .work-card-num {
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .work-card-house {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--parchment);
+            margin-bottom: 0.35rem;
+            letter-spacing: 0.01em;
+            line-height: 1.25;
+        }
+
+        .work-card-type {
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: rgba(250, 247, 242, 0.62);
+            margin-bottom: 1.1rem;
+        }
+
+        .work-card-desc {
+            font-size: 0.88rem;
+            color: rgba(250, 247, 242, 0.78);
+            line-height: 1.8;
+            font-weight: 300;
+            flex: 1;
+        }
+
+        .work-card-desc em {
+            color: rgba(250, 247, 242, 0.95);
+            font-style: italic;
+        }
+
+        .work-card-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 1.8rem;
+            transition: gap 0.25s;
+        }
+
+        .work-card:hover .work-card-arrow { gap: 0.75rem; }
+
+        /* Featured card — spans full width */
+        .work-card.featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: rgba(139,26,42,0.06);
+            border-color: rgba(139,26,42,0.25);
+            padding: 2.8rem;
+        }
+
+        .work-card.featured .work-card-house {
+            font-size: 1.7rem;
+        }
+
+        .work-card.featured .work-card-desc {
+            color: rgba(250, 247, 242, 0.82);
+        }
+
+        .work-card-visual {
+            height: 240px;
+            background: rgba(139,26,42,0.06);
+            border: 1px solid rgba(139,26,42,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: 400;
+            color: rgba(250,247,242,0.18);
+            letter-spacing: 0.08em;
+            flex-shrink: 0;
+        }
+
+
+        /* ===========================
+           EXPERIENCE
+        =========================== */
+        #experience { background: var(--parchment); }
+
+        #experience > .section-inner > h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--espresso);
+            margin-bottom: 3rem;
+        }
+
+        .exp-list { display: flex; flex-direction: column; }
+
+        .exp-item {
+            display: grid;
+            grid-template-columns: 190px 1fr;
+            gap: 3rem;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid rgba(139,26,42,0.14);
+        }
+
+        .exp-item:first-child { border-top: 1px solid rgba(139,26,42,0.14); }
+
+        .exp-date {
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.07em;
+            color: var(--text-light);
+            text-transform: uppercase;
+            line-height: 1.7;
+            padding-top: 0.15rem;
+        }
+
+        .exp-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--espresso);
+            margin-bottom: 0.25rem;
+        }
+
+        .exp-company {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.85rem;
+        }
+
+        .exp-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+        }
+
+        .exp-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 1rem;
+        }
+
+        .exp-tag {
+            font-size: 0.63rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            background: var(--parchment-dark);
+            padding: 0.25rem 0.65rem;
+        }
+
+
+        /* ===========================
+           PHOTO STRIP
+        =========================== */
+        #moments {
+            background: var(--parchment-dark);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .moments-strip {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 480px;
+        }
+
+        .moment-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .moment-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .moment-item:hover img { transform: scale(1.03); }
+
+        .moment-caption {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 1.2rem 1.5rem;
+            background: linear-gradient(transparent, rgba(26,5,8,0.72));
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(250,247,242,0.82);
+        }
+
+        @media (max-width: 600px) {
+            .moments-strip { grid-template-columns: 1fr; height: auto; }
+            .moment-item { height: 320px; }
+        }
+
+        @media (max-width: 900px) {
+            .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 0; }
+            .stat-item:nth-child(2) { border-right: none; }
+            .stat-item:nth-child(3) { border-right: 1px solid rgba(139,26,42,0.15); border-top: 1px solid rgba(139,26,42,0.15); }
+            .stat-item:nth-child(4) { border-top: 1px solid rgba(139,26,42,0.15); }
+            .stat-item:first-child { text-align: center; padding-left: 2rem; }
+            .stats-strip { padding: 3rem 2rem; }
+        }
+
+
+        /* ===========================
+           EDUCATION & CREDENTIALS
+        =========================== */
+        #education { background: var(--parchment-dark); }
+
+        #education > .section-inner > h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--espresso);
+            margin-bottom: 3rem;
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .edu-photo-col {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .edu-photo {
+            width: 100%;
+            height: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 2px;
+            display: block;
+        }
+
+        .edu-col-label {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .edu-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(139,26,42,0.14);
+        }
+
+        .edu-item:first-of-type { border-top: 1px solid rgba(139,26,42,0.14); }
+
+        .edu-item-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--espresso);
+            margin-bottom: 0.2rem;
+        }
+
+        .edu-item-org {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.35rem;
+        }
+
+        .edu-item-date {
+            font-size: 0.72rem;
+            color: var(--text-light);
+        }
+
+        .edu-item-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-top: 0.6rem;
+        }
+
+        /* Skills strip */
+        .skills-strip {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(139,26,42,0.18);
+        }
+
+        .skills-strip h3 {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-pill {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            border: 1px solid rgba(139,26,42,0.2);
+            padding: 0.45rem 1.1rem;
+            border-radius: 2px;
+            letter-spacing: 0.03em;
+        }
+
+        .skills-category {
+            margin-bottom: 2rem;
+        }
+
+        .skills-category-label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.9rem;
+        }
+
+        /* ===========================
+           CERTIFICATIONS ACCORDION
+        =========================== */
+        .cert-section {
+            margin-top: 3rem;
+            border-top: 1px solid rgba(139,26,42,0.18);
+            padding-top: 2.5rem;
+        }
+
+        .cert-img-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .cert-img-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .cert-clickable {
+            cursor: pointer;
+        }
+
+        .cert-clickable:hover .cert-real-img {
+            opacity: 0.88;
+            transform: scale(1.02);
+        }
+
+        .cert-real-img {
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .cert-view-hint {
+            position: absolute;
+            top: 0.6rem;
+            right: 0.6rem;
+            background: var(--espresso);
+            color: var(--parchment);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            padding: 0.3rem 0.6rem;
+            border-radius: 2px;
+            opacity: 0;
+            transition: opacity 0.25s;
+            pointer-events: none;
+        }
+
+        .cert-clickable:hover .cert-view-hint {
+            opacity: 1;
+        }
+
+        .cert-img-placeholder {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: var(--parchment-dark);
+            border: 1.5px dashed rgba(139,26,42,0.25);
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 1.5rem;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .cert-img-sub {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-style: normal;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .cert-real-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 2px;
+            display: block;
+            border: 1px solid rgba(139,26,42,0.15);
+        }
+
+        .cert-img-caption { padding-top: 0.6rem; }
+
+        @media (max-width: 900px) {
+            .cert-img-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+
+        /* ===========================
+           CONTACT
+        =========================== */
+        #contact {
+            background: var(--espresso);
+            text-align: center;
+        }
+
+        #contact .section-inner { max-width: 680px; }
+        #contact .section-label { color: rgba(250, 247, 242, 0.5); justify-content: center; display: block; }
+
+        #contact h2 {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            color: var(--parchment);
+            margin-bottom: 1.2rem;
+            line-height: 1.1;
+        }
+
+        #contact h2 em { color: var(--gold-light); }
+
+        .contact-sub {
+            font-size: 0.97rem;
+            color: rgba(250,247,242,0.75);
+            line-height: 1.85;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .contact-email {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.15rem, 2.5vw, 1.7rem);
+            font-weight: 400;
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(139,26,42,0.35);
+            padding-bottom: 3px;
+            transition: opacity 0.2s;
+        }
+
+        .contact-email:hover { opacity: 0.65; }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .contact-link {
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: rgba(250,247,242,0.78);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(250,247,242,0.3);
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .contact-link:hover {
+            color: var(--gold);
+            border-color: rgba(139,26,42,0.5);
+        }
+
+        .footer-bar {
+            padding-top: 3rem;
+            border-top: 1px solid rgba(139,26,42,0.12);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 0.68rem;
+            color: rgba(160,128,144,0.5);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+
+        /* ===========================
+           RESPONSIVE
+        =========================== */
+        @media (max-width: 900px) {
+            nav { padding: 1.2rem 2rem; }
+            .nav-links { display: none; }
+            section { padding: 4.5rem 2rem; }
+            #hero { padding: 7rem 2rem 4rem; }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .about-photo { aspect-ratio: 4/3; max-height: 380px; }
+
+            .work-grid { grid-template-columns: 1fr; }
+            .work-card.featured {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .work-card-visual { height: 180px; }
+
+            .exp-item {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+
+            .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+            .footer-bar { flex-direction: column; gap: 0.8rem; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            #hero { padding: 7rem 1.5rem 4rem; }
+            section { padding: 4rem 1.5rem; }
+            nav { padding: 1.1rem 1.5rem; }
+            .contact-links { gap: 1.5rem; }
+        }
+
+
+        /* ===========================
+           ACADEMIC WRITING
+        =========================== */
+        #writing {
+            background: var(--espresso);
+        }
+
+        #writing .section-label {
+            color: rgba(250, 247, 242, 0.45);
+        }
+
+        #writing h2 {
+            color: var(--parchment);
+        }
+
+        .writing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Dissertation — featured */
+        .writing-card-featured {
+            background: rgba(250, 247, 242, 0.05);
+            border: 1px solid rgba(139, 26, 42, 0.45);
+            border-radius: 2px;
+            padding: 2.8rem 3rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: start;
+            gap: 2rem;
+            text-decoration: none;
+            transition: background 0.25s, border-color 0.25s;
+        }
+
+        .writing-card-featured:hover {
+            background: rgba(250, 247, 242, 0.09);
+            border-color: rgba(139, 26, 42, 0.7);
+        }
+
+        .writing-card-badge {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            border: 1px solid rgba(176, 64, 85, 0.4);
+            padding: 0.28rem 0.75rem;
+            border-radius: 1px;
+            margin-bottom: 1.2rem;
+        }
+
+        .writing-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            font-weight: 500;
+            color: var(--parchment);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .writing-card-meta {
+            font-size: 0.68rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(250, 247, 242, 0.4);
+            margin-bottom: 1rem;
+        }
+
+        .writing-card-desc {
+            font-size: 0.88rem;
+            color: rgba(250, 247, 242, 0.65);
+            line-height: 1.7;
+            max-width: 640px;
+        }
+
+        .writing-card-arrow {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            white-space: nowrap;
+            margin-top: 0.3rem;
+        }
+
+        /* Regular paper cards */
+        .writing-papers {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .writing-card {
+            background: rgba(250, 247, 242, 0.03);
+            border: 1px solid rgba(250, 247, 242, 0.08);
+            border-radius: 2px;
+            padding: 2rem 2.2rem;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .writing-card:hover {
+            background: rgba(250, 247, 242, 0.06);
+            border-color: rgba(250, 247, 242, 0.16);
+        }
+
+        .writing-card .writing-card-badge {
+            color: rgba(250, 247, 242, 0.45);
+            border-color: rgba(250, 247, 242, 0.15);
+            margin-bottom: 0;
+        }
+
+        .writing-card .writing-card-title {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        .writing-card .writing-card-desc {
+            font-size: 0.84rem;
+            flex: 1;
+        }
+
+        .writing-card .writing-card-arrow {
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .writing-papers { grid-template-columns: 1fr; }
+            .writing-card-featured { grid-template-columns: 1fr; }
+        }
+
+        .writing-card-featured,
+        .writing-card { cursor: pointer; }
+
+
+        /* ===========================
+           MARQUEE TICKER
+        =========================== */
+        .marquee-section {
+            background: var(--espresso);
+            overflow: hidden;
+            padding: 1.4rem 0;
+            border-top: 1px solid rgba(139,26,42,0.25);
+            border-bottom: 1px solid rgba(139,26,42,0.25);
+            position: relative;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee-scroll 30s linear infinite;
+            will-change: transform;
+        }
+
+        .marquee-track:hover { animation-play-state: paused; }
+
+        .marquee-group {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            flex-shrink: 0;
+            padding-right: 0;
+        }
+
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            gap: 2.2rem;
+            padding: 0 2.2rem;
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3vw, 2.4rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--parchment);
+            white-space: nowrap;
+            letter-spacing: 0.02em;
+            opacity: 0.92;
+        }
+
+        .marquee-sep {
+            color: var(--gold);
+            font-size: 1.1rem;
+            opacity: 0.6;
+            flex-shrink: 0;
+        }
+
+        @keyframes marquee-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+
+        /* ===========================
+           HERO KEYWORD TICKER
+        =========================== */
+        .hero-ticker-wrap {
+            overflow: hidden;
+            margin-top: 2rem;
+            padding: 0.8rem 0;
+            border-top: 1px solid rgba(250,247,242,0.1);
+        }
+        .hero-ticker-row {
+            display: flex;
+            width: max-content;
+            margin-bottom: 0.5rem;
+        }
+        .hero-ticker-row:last-child { margin-bottom: 0; }
+        .hero-ticker-row.fwd  { animation: marquee-scroll 22s linear infinite; }
+        .hero-ticker-row.rev  { animation: marquee-scroll-rev 26s linear infinite; }
+        @keyframes marquee-scroll-rev {
+            0%   { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .hero-ticker-group {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .hero-ticker-kw {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(0.65rem, 1vw, 0.8rem);
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(250,247,242,0.55);
+            white-space: nowrap;
+            padding: 0 1.2rem;
+        }
+        .hero-ticker-sep {
+            color: var(--gold);
+            opacity: 0.7;
+            font-size: 0.7rem;
+            flex-shrink: 0;
+        }
+
+        /* ===========================
+           STATS STRIP
+        =========================== */
+        .stats-strip {
+            background: var(--parchment-dark);
+            padding: 4rem 3rem;
+            border-bottom: 1px solid rgba(139,26,42,0.1);
+        }
+        .stats-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .stat-item {
+            padding: 0 2rem;
+            border-right: 1px solid rgba(139,26,42,0.15);
+            text-align: center;
+        }
+        .stat-item:first-child { padding-left: 0; text-align: left; }
+        .stat-item:last-child  { border-right: none; }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 400;
+            color: var(--espresso);
+            line-height: 1;
+            letter-spacing: -0.02em;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .stat-label {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            display: block;
+            line-height: 1.5;
+        }
+
+        /* ===========================
+           ERASER CANVAS
+        =========================== */
+        #eraser-canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            touch-action: none;
+            pointer-events: all;
+            border-radius: 2px;
+        }
+        #eraser-hint {
+            position: absolute;
+            inset: 0;
+            z-index: 11;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        #eraser-hint-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            font-style: italic;
+            color: var(--espresso);
+            letter-spacing: 0.18em;
+            opacity: 0.55;
+            transition: opacity 0.6s ease;
+        }
+
+        /* ===========================
+           CUSTOM CURSOR
+        =========================== */
+        @media (hover: hover) and (pointer: fine) {
+            body, a, button, [role="button"],
+            .work-card, .writing-card, .writing-card-featured,
+            .exp-toggle, .modal-close-btn { cursor: none !important; }
+        }
+
+        #cursor-dot {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            will-change: left, top;
+        }
+
+        #cursor-ring {
+            position: fixed;
+            width: 36px;
+            height: 36px;
+            border: 1.5px solid rgba(139, 26, 42, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s,
+                        width 0.35s ease,
+                        height 0.35s ease,
+                        background 0.35s,
+                        border-color 0.35s;
+            will-change: left, top;
+        }
+
+        #cursor-ring.cursor-hover {
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .cursor-label {
+            font-size: 0.46rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--parchment);
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        #cursor-ring.cursor-hover .cursor-label { opacity: 1; }
+
+
+        /* ===========================
+           WIPE REVEAL
+        =========================== */
+        .wipe-host {
+            position: relative;
+            overflow: visible;
+        }
+
+        .wipe-inner {
+            display: block;
+        }
+
+        /* Hidden state — text clipped from right */
+        .wipe-host .wipe-inner {
+            clip-path: inset(0 100% -18px 0);
+        }
+
+        /* Revealed state — text fully visible */
+        .wipe-host.revealed .wipe-inner {
+            clip-path: inset(0 0% -18px 0);
+            transition: clip-path 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        /* The wipe bar — thin line that sweeps across as text reveals */
+        .wipe-bar {
+            position: absolute;
+            top: -4px;
+            bottom: -4px;
+            left: 0;
+            width: 2px;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        /* Light background sections — gold bar */
+        .wipe-host:not(.dark) .wipe-bar {
+            background: linear-gradient(to bottom,
+                transparent,
+                rgba(139, 26, 42, 0.5),
+                transparent);
+        }
+
+        /* Dark background sections — cream bar */
+        .wipe-host.dark .wipe-bar {
+            background: linear-gradient(to bottom,
+                transparent,
+                rgba(250, 247, 242, 0.5),
+                transparent);
+        }
+
+        .wipe-host.revealed .wipe-bar {
+            animation: wipe-bar-travel 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        }
+
+        @keyframes wipe-bar-travel {
+            0%   { left: 0%;   opacity: 1; }
+            80%  { opacity: 0.7; }
+            100% { left: 100%; opacity: 0; }
+        }
+
+
+        /* ===========================
+           FADE RISE (cards + items)
+        =========================== */
+        .fade-rise {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.75s ease, transform 0.75s ease;
+        }
+
+        .fade-rise.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* ===========================
+           MODAL OVERLAY + PANEL
+        =========================== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            background: rgba(26, 5, 8, 0.82);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s, visibility 0.35s;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-panel {
+            position: fixed;
+            top: 0; right: 0; bottom: 0;
+            width: min(700px, 100vw);
+            background: var(--parchment);
+            z-index: 201;
+            overflow-y: auto;
+            padding: 0 3rem 4rem;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: default;
+        }
+
+        .modal-panel.open { transform: translateX(0); }
+
+        .modal-top-bar {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0 1rem;
+            background: var(--parchment);
+            border-bottom: 1px solid rgba(139,26,42,0.12);
+            margin-bottom: 2.5rem;
+            z-index: 1;
+        }
+
+        .modal-close-btn {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            transition: color 0.2s;
+        }
+
+        .modal-close-btn:hover { color: var(--gold); }
+
+        .modal-num {
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.75;
+        }
+
+        .modal-house {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.1rem;
+            font-weight: 500;
+            color: var(--espresso);
+            line-height: 1.15;
+            margin: 1.2rem 0 0.4rem;
+        }
+
+        .modal-type {
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(139,26,42,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .modal-section-label {
+            display: block;
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.65rem;
+            margin-top: 1.8rem;
+        }
+
+        .modal-text {
+            font-size: 0.91rem;
+            color: var(--text-muted);
+            line-height: 1.9;
+        }
+
+        .modal-text em {
+            color: var(--espresso);
+            font-style: italic;
+        }
+
+        .modal-concept {
+            background: var(--parchment-dark);
+            border-left: 2px solid var(--gold);
+            padding: 1.4rem 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .modal-concept-label {
+            display: block;
+            font-size: 0.58rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.7rem;
+        }
+
+        .modal-concept-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--espresso);
+            line-height: 1.6;
+        }
+
+        .modal-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--parchment);
+            background: var(--gold);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            margin-top: 2.5rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .modal-cta:hover {
+            background: var(--gold-light);
+            transform: translateX(3px);
+        }
+
+        .modal-cta-note {
+            display: block;
+            font-size: 0.72rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+
+        /* ===========================
+           EXPERIENCE EXPAND
+        =========================== */
+        .exp-expand {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .exp-item.expanded .exp-expand { display: block; }
+
+        .exp-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-top: 1rem;
+            font-family: 'DM Sans', sans-serif;
+            transition: gap 0.2s;
+        }
+
+        .exp-toggle:hover { gap: 0.6rem; }
+
+        .exp-results-note {
+            margin-top: 1.2rem;
+            padding: 0.85rem 1.1rem;
+            border-left: 2px solid rgba(139,26,42,0.2);
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Custom cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"><span class="cursor-label">VIEW</span></div>
+
+    <!-- ── NAVIGATION ───────────────────────── -->
+    <nav>
+        <a href="#hero" class="nav-logo">N · S</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education and Skills</a></li>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Available · Paris 2026</a>
+    </nav>
+
+
+    <!-- ── HERO ─────────────────────────────── -->
+    <section id="hero">
+        <div class="hero-inner">
+            <!-- Left: text content -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Open to luxury marketing internships · Paris · 2026
+                </div>
+
+                <h1 class="hero-name">
+                    Nakshatra<br><em>Sane.</em>
+                </h1>
+
+                <p class="hero-tagline">
+                    Brand strategy and digital communication for luxury houses,
+                    with a focus on beauty, perfume and accessories.
+                </p>
+
+                <!-- Keyword ticker — inline inside hero-content -->
+                <div class="hero-ticker-wrap" aria-hidden="true" style="margin-top:1.5rem;margin-bottom:0;">
+                    <div class="hero-ticker-row fwd">
+                        <div class="hero-ticker-group">
+                            <span class="hero-ticker-kw">Social Media Strategy</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Brand Marketing</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Content Creation</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Influencer Management</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">E-commerce</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Community Management</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Digital Marketing</span><span class="hero-ticker-sep">✦</span>
+                        </div>
+                        <div class="hero-ticker-group">
+                            <span class="hero-ticker-kw">Social Media Strategy</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Brand Marketing</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Content Creation</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Influencer Management</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">E-commerce</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Community Management</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Digital Marketing</span><span class="hero-ticker-sep">✦</span>
+                        </div>
+                    </div>
+                    <div class="hero-ticker-row rev">
+                        <div class="hero-ticker-group">
+                            <span class="hero-ticker-kw">Luxury Branding</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Visual Storytelling</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Press Relations</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Campaign Strategy</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Fashion Marketing</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Experiential Events</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">D2C Growth</span><span class="hero-ticker-sep">✦</span>
+                        </div>
+                        <div class="hero-ticker-group">
+                            <span class="hero-ticker-kw">Luxury Branding</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Visual Storytelling</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Press Relations</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Campaign Strategy</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Fashion Marketing</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">Experiential Events</span><span class="hero-ticker-sep">✦</span>
+                            <span class="hero-ticker-kw">D2C Growth</span><span class="hero-ticker-sep">✦</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-label">Degree</span>
+                        <span class="hero-meta-value">MSc Luxury Marketing · NEOMA</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <span class="hero-meta-label">Based</span>
+                        <span class="hero-meta-value">Paris, France · 48.85°N</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: portrait -->
+            <div class="hero-portrait">
+                <img src="pic2.jpeg" alt="Nakshatra Sane">
+            </div>
+
+        </div>
+
+        <!-- Eraser reveal overlay -->
+        <canvas id="eraser-canvas" aria-hidden="true"></canvas>
+        <div id="eraser-hint" aria-hidden="true">
+            <span id="eraser-hint-text">wipe to reveal &nbsp;↓</span>
+        </div>
+
+    </section>
+
+
+    <!-- ── STATS STRIP ──────────────────────────── -->
+    <div class="stats-strip">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-number">7+</span>
+                <span class="stat-label">Luxury Brand<br>Projects</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Languages<br>Spoken</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Years in Digital<br>Marketing</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">20K+</span>
+                <span class="stat-label">Social Community<br>Managed</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ── ABOUT ─────────────────────────────── -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+
+                <div class="about-photo-wrap">
+                    <div class="about-photo">
+                        <img src="pic3.jpeg" alt="Nakshatra Sane, Paris">
+                    </div>
+                    <p class="about-photo-caption">Paris, 2026</p>
+                </div>
+
+                <div class="about-content">
+                    <span class="section-label">01 · About</span>
+                    <h2>Where brand intelligence meets sensory storytelling.</h2>
+                    <p>
+                        I am Nakshatra, an MSc Luxury Marketing graduate from NEOMA Business School
+                        in Paris. I specialise in brand strategy, digital communication, and
+                        experiential storytelling for premium and luxury houses.
+                    </p>
+                    <p>
+                        Every project in my portfolio began with a real brief and a real brand
+                        problem. I developed a 360° go-to-market strategy presented to Christian
+                        Dior Couture HQ in Paris, conceived a full campaign repositioning for
+                        Maison Francis Kurkdjian, conducted a self-initiated audit and campaign
+                        strategy for Boucheron, and pitched a product innovation at L'Oréal
+                        Brandstorm. I build strategy to solve problems, not to fill decks.
+                    </p>
+                    <p>
+                        My focus is beauty, perfume, and accessories: sectors where sensory
+                        storytelling, artisanal codes, and client intimacy define the brand
+                        experience. Agency work in high jewelry digital content gave me a
+                        working understanding of how luxury houses operate in practice.
+                    </p>
+                    <p>
+                        Certified <em>Inside LVMH.</em> Trained in luxury group management at
+                        Università Bocconi. Available for internship in Paris immediately.
+                    </p>
+                    <div class="about-tags">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ── WORK ──────────────────────────────── -->
+    <section id="work">
+
+        <!-- Big heading -->
+        <div class="work-header">
+            <span class="section-label">02 · Selected Work</span>
+            <h2 class="work-big-heading">Projects.</h2>
+            <p class="work-scroll-cue">Scroll to explore &nbsp;→</p>
+        </div>
+
+        <!-- Horizontal drag-to-scroll strip -->
+        <div class="work-scroll-wrap" id="workScroll">
+            <div class="work-scroll-track">
+
+                <div class="work-hcard" onclick="openModal('mkf')" role="button" tabindex="0">
+                    <div class="work-hcard-visual mkf-bg" style="background-image:url('img-mkf.jpg');background-size:cover;background-position:center;">
+                        <span class="work-hcard-num">CS · 01</span>
+                    </div>
+                    <div class="work-hcard-meta">
+                        <div class="work-hcard-house">Maison Francis Kurkdjian</div>
+                        <div class="work-hcard-type">Experiential Storytelling Strategy</div>
+                    </div>
+                </div>
+
+                <div class="work-hcard" onclick="openModal('dior')" role="button" tabindex="0">
+                    <div class="work-hcard-visual dior-bg" style="background-image:url('img-dior.jpg');background-size:cover;background-position:center;">
+                        <span class="work-hcard-num">CS · 02</span>
+                    </div>
+                    <div class="work-hcard-meta">
+                        <div class="work-hcard-house">Christian Dior Couture</div>
+                        <div class="work-hcard-type">360° Go-to-Market Strategy</div>
+                    </div>
+                </div>
+
+                <div class="work-hcard" onclick="openModal('boucheron')" role="button" tabindex="0">
+                    <div class="work-hcard-visual boucheron-bg" style="background-image:url('img-boucheron.jpg');background-size:cover;background-position:center;">
+                        <span class="work-hcard-num">CS · 03</span>
+                    </div>
+                    <div class="work-hcard-meta">
+                        <div class="work-hcard-house">Boucheron</div>
+                        <div class="work-hcard-type">Social Media Audit &amp; Campaign</div>
+                    </div>
+                </div>
+
+                <div class="work-hcard" onclick="openModal('jacquemus')" role="button" tabindex="0">
+                    <div class="work-hcard-visual jacquemus-bg" style="background-image:url('img-jacquemus.jpg');background-size:cover;background-position:center;">
+                        <span class="work-hcard-num">CS · 04</span>
+                    </div>
+                    <div class="work-hcard-meta">
+                        <div class="work-hcard-house">Jacquemus</div>
+                        <div class="work-hcard-type">Brand Extension · Fragrance Launch</div>
+                    </div>
+                </div>
+
+                <div class="work-hcard" onclick="openModal('loreal')" role="button" tabindex="0">
+                    <div class="work-hcard-visual loreal-bg" style="background-image:url('img-loreal.jpg');background-size:cover;background-position:center;">
+                        <span class="work-hcard-num">CS · 05</span>
+                    </div>
+                    <div class="work-hcard-meta">
+                        <div class="work-hcard-house">L'Oréal Luxe</div>
+                        <div class="work-hcard-type">Product Innovation · Brandstorm</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ── MARQUEE TICKER ───────────────────── -->
+    <div class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <!-- Group 1 -->
+            <div class="marquee-group">
+                <div class="marquee-item">
+                    <span class="marquee-text">Brand Strategy</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Luxury Marketing</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Digital Communication</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Experiential Marketing</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Press Relations</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Visual Storytelling</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Influencer Strategy</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Community Management</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+            </div>
+            <!-- Group 2 — exact duplicate for seamless loop -->
+            <div class="marquee-group">
+                <div class="marquee-item">
+                    <span class="marquee-text">Brand Strategy</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Luxury Marketing</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Digital Communication</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Experiential Marketing</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Press Relations</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Visual Storytelling</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Influencer Strategy</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+                <div class="marquee-item">
+                    <span class="marquee-text">Community Management</span>
+                    <span class="marquee-sep">·</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ── EXPERIENCE ────────────────────────── -->
+    <section id="experience">
+        <div class="section-inner">
+            <span class="section-label">03 · Experience</span>
+            <h2>On the ground.</h2>
+
+            <div class="exp-list">
+
+                <!-- NIGHTERS -->
+                <div class="exp-item">
+                    <div class="exp-date">Feb 2026 to Present<br>Paris, France</div>
+                    <div>
+                        <div class="exp-title">UGC Strategy, Volunteer</div>
+                        <div class="exp-company">Nighters · Paris</div>
+                        <div class="exp-tags">
+                            <span class="exp-tag">Community Management</span>
+                            <span class="exp-tag">Content Strategy</span>
+                            <span class="exp-tag">Instagram and TikTok</span>
+                        </div>
+                        <div class="exp-expand">
+                            <p class="exp-desc">
+                                Nighters had a strong premium brand identity but no structured
+                                framework to channel creator output into consistent brand
+                                storytelling. I built the UGC strategy from the ground up:
+                                developing creator briefs calibrated to European cultural codes,
+                                managing ongoing partnerships with content creators, and
+                                maintaining brand voice consistency across Instagram and TikTok.
+                                The result was a more coherent creator output and sustained
+                                organic reach growth within a premium audience segment.
+                            </p>
+                            <div class="exp-results-note">Metrics and results — to be added.</div>
+                        </div>
+                        <button class="exp-toggle" onclick="toggleExp(event, this)">+ View details</button>
+                    </div>
+                </div>
+
+                <!-- FASHION SHOW -->
+                <div class="exp-item">
+                    <div class="exp-date">2026<br>Paris 11ème</div>
+                    <div>
+                        <div class="exp-title">Fashion Show Production, Volunteer</div>
+                        <div class="exp-company">Independent Show · Paris</div>
+                        <div class="exp-tags">
+                            <span class="exp-tag">Live Event Production</span>
+                            <span class="exp-tag">Fashion</span>
+                            <span class="exp-tag">Paris</span>
+                        </div>
+                        <div class="exp-expand">
+                            <p class="exp-desc">
+                                An independent Paris fashion show required structured production
+                                support across logistics, content capture, and event flow. I
+                                contributed to show organisation and live content management,
+                                working across teams to ensure smooth execution and maximum
+                                visual output from the event.
+                            </p>
+                            <div class="exp-results-note">Metrics and results — to be added.</div>
+                        </div>
+                        <button class="exp-toggle" onclick="toggleExp(event, this)">+ View details</button>
+                    </div>
+                </div>
+
+                <!-- GRAPHINET -->
+                <div class="exp-item">
+                    <div class="exp-date">Apr to Sep 2024<br>India</div>
+                    <div>
+                        <div class="exp-title">Social Media Intern</div>
+                        <div class="exp-company">Graphinet Media Solutions</div>
+                        <div class="exp-tags">
+                            <span class="exp-tag">High Jewelry</span>
+                            <span class="exp-tag">Meta Ads Manager</span>
+                            <span class="exp-tag">Google Analytics</span>
+                            <span class="exp-tag">Influencer Management</span>
+                        </div>
+                        <div class="exp-expand">
+                            <p class="exp-desc">
+                                High jewelry brands at Graphinet needed digital content that
+                                preserved exclusivity while delivering measurable platform
+                                growth. Managing strategy across Instagram, TikTok, and YouTube,
+                                I developed platform-native content aligned with each brand's
+                                premium codes, managed an influencer partnership network of
+                                219K followers, and optimised paid and organic campaigns through
+                                Meta Ads Manager and Google Analytics.
+                            </p>
+                            <div class="exp-results-note">
+                                25% engagement increase · 30K+ organic views from influencer content ·
+                                15% conversion on premium segments · 38% uplift in organic visibility
+                            </div>
+                        </div>
+                        <button class="exp-toggle" onclick="toggleExp(event, this)">+ View details</button>
+                    </div>
+                </div>
+
+                <!-- PUMPKIN STUDIO -->
+                <div class="exp-item">
+                    <div class="exp-date">Mar to Sep 2023</div>
+                    <div>
+                        <div class="exp-title">Visual Communication Intern</div>
+                        <div class="exp-company">Pumpkin Studio</div>
+                        <div class="exp-tags">
+                            <span class="exp-tag">Visual Identity</span>
+                            <span class="exp-tag">High Jewelry</span>
+                            <span class="exp-tag">Campaign Briefs</span>
+                        </div>
+                        <div class="exp-expand">
+                            <p class="exp-desc">
+                                High jewelry clients required visual narratives that could carry
+                                collection stories with precision across campaign and trade
+                                contexts. Over six months, I produced more than eight visual
+                                content projects including mood boards, campaign briefs, narrative
+                                supports, and sales tools, each calibrated to the respective
+                                house's premium positioning. Collaborating with creative and
+                                media teams, I reinforced visual identity consistency across
+                                multiple collections and client presentations.
+                            </p>
+                            <div class="exp-results-note">Metrics and results — to be added.</div>
+                        </div>
+                        <button class="exp-toggle" onclick="toggleExp(event, this)">+ View details</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ── PHOTO STRIP ──────────────────────── -->
+    <section id="moments" style="display:none">
+        <div class="moments-strip">
+        </div>
+    </section>
+
+
+    <!-- ── EDUCATION ─────────────────────────── -->
+    <section id="education">
+        <div class="section-inner">
+            <span class="section-label">04 · Education</span>
+            <h2>Academic foundation.</h2>
+
+            <div class="edu-grid">
+                <div>
+                    <span class="edu-col-label">Graduate</span>
+                    <div class="edu-item">
+                        <div class="edu-item-title">MSc Marketing, Luxury</div>
+                        <div class="edu-item-org">NEOMA Business School · Paris</div>
+                        <div class="edu-item-date">Oct 2025 to Apr 2026</div>
+                    </div>
+                    <span class="edu-col-label" style="margin-top:2rem;display:block;">Undergraduate</span>
+                    <div class="edu-item">
+                        <div class="edu-item-title">Bachelor of Commerce</div>
+                        <div class="edu-item-org">B.M.C.C. · Mumbai, India</div>
+                        <div class="edu-item-date">Jun 2021 to Apr 2024</div>
+                    </div>
+                </div>
+                <div class="edu-photo-col">
+                    <img src="pic1.jpeg" alt="NEOMA Business School, Reims" class="edu-photo">
+                </div>
+            </div>
+
+            <!-- Skills strip -->
+            <div class="skills-strip">
+                <h3>Tools and Skills</h3>
+
+                <div class="skills-category">
+                    <span class="skills-category-label">Digital Marketing</span>
+                    <div class="skills-list">
+                        <span class="skill-pill">Meta Ads Manager</span>
+                        <span class="skill-pill">Google Analytics</span>
+                        <span class="skill-pill">TikTok Analytics</span>
+                        <span class="skill-pill">Pinterest Analytics</span>
+                        <span class="skill-pill">Hootsuite</span>
+                        <span class="skill-pill">HubSpot</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <span class="skills-category-label">Creative Tools</span>
+                    <div class="skills-list">
+                        <span class="skill-pill">Canva</span>
+                        <span class="skill-pill">Adobe Photoshop</span>
+                        <span class="skill-pill">Adobe Illustrator</span>
+                        <span class="skill-pill">CapCut</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <span class="skills-category-label">Office Suite</span>
+                    <div class="skills-list">
+                        <span class="skill-pill">PowerPoint</span>
+                        <span class="skill-pill">Excel (pivot tables, VLOOKUP)</span>
+                        <span class="skill-pill">Google Workspace</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <span class="skills-category-label">Disciplines</span>
+                    <div class="skills-list">
+                        <span class="skill-pill">Brand Strategy</span>
+                        <span class="skill-pill">Community Management</span>
+                        <span class="skill-pill">Experiential Marketing</span>
+                        <span class="skill-pill">Influencer Management</span>
+                        <span class="skill-pill">Visual Merchandising</span>
+                        <span class="skill-pill">Press Relations</span>
+                        <span class="skill-pill">Fashion Event Production</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <span class="skills-category-label">Languages</span>
+                    <div class="skills-list">
+                        <span class="skill-pill">English · C2</span>
+                        <span class="skill-pill">French · B1</span>
+                        <span class="skill-pill">Hindi · Native</span>
+                        <span class="skill-pill">Marathi · Native</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="cert-section">
+                <span class="edu-col-label" style="display:block;margin-bottom:1.5rem;">Certifications</span>
+                <div class="cert-img-grid">
+
+                    <div class="cert-img-box cert-clickable" onclick="openModal('cert-lvmh')" role="button" tabindex="0" title="View certificate">
+                        <img src="cert-lvmh-1.png" alt="Inside LVMH Certificate" class="cert-real-img">
+                        <div class="cert-img-caption">
+                            <div class="edu-item-title" style="font-size:0.9rem;">Inside LVMH</div>
+                            <div class="edu-item-org">LVMH Group · Dec 2025–Dec 2026</div>
+                        </div>
+                        <span class="cert-view-hint">View ↗</span>
+                    </div>
+
+                    <div class="cert-img-box cert-clickable" onclick="openModal('cert-loreal')" role="button" tabindex="0" title="View certificate">
+                        <img src="cert-loreal-cert-1.png" alt="L'Oréal Brandstorm Certificate" class="cert-real-img">
+                        <div class="cert-img-caption">
+                            <div class="edu-item-title" style="font-size:0.9rem;">L'Oréal Brandstorm</div>
+                            <div class="edu-item-org">L'Oréal · 2025</div>
+                        </div>
+                        <span class="cert-view-hint">View ↗</span>
+                    </div>
+
+                    <div class="cert-img-box cert-clickable" onclick="openModal('cert-sustain')" role="button" tabindex="0" title="View certificate">
+                        <img src="cert-3-1.png" alt="Sustainable Fashion Certificate" class="cert-real-img">
+                        <div class="cert-img-caption">
+                            <div class="edu-item-title" style="font-size:0.9rem;">Sustainable Fashion</div>
+                            <div class="edu-item-org">Copenhagen Business School · Jan 2026</div>
+                        </div>
+                        <span class="cert-view-hint">View ↗</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ── ACADEMIC WRITING ─────────────────── -->
+    <section id="writing">
+        <div class="section-inner">
+            <span class="section-label">05 · Academic Writing</span>
+            <h2>Research and<br><em>ideas.</em></h2>
+
+            <div class="writing-grid">
+
+                <!-- DISSERTATION — FEATURED -->
+                <div class="writing-card-featured" onclick="openModal('diss')" role="button" tabindex="0">
+                    <div>
+                        <span class="writing-card-badge">Dissertation · MSc Luxury Marketing · NEOMA Business School</span>
+                        <div class="writing-card-title">Why is Gen Z Disappointed<br>in Luxury Brands?</div>
+                        <div class="writing-card-meta">Solo · 2025–2026</div>
+                        <p class="writing-card-desc">
+                            Gen Z is luxury's most culturally influential consumer cohort —
+                            and increasingly its most disillusioned. This dissertation examines
+                            the gap between what luxury brands claim to stand for and what they
+                            actually do, and concludes with strategic recommendations for houses
+                            seeking to rebuild credibility with the under-30 consumer.
+                        </p>
+                    </div>
+                    <span class="writing-card-arrow">Read summary →</span>
+                </div>
+
+                <!-- PAPER CARDS -->
+                <div class="writing-papers">
+
+                    <!-- BRUNELLO CUCINELLI -->
+                    <div class="writing-card" onclick="openModal('brunello')" role="button" tabindex="0">
+                        <span class="writing-card-badge">Solo Paper · NEOMA Business School</span>
+                        <div class="writing-card-title">Brunello Cucinelli: The Business of Radical Humanity</div>
+                        <div class="writing-card-meta">Business Models in Luxury</div>
+                        <p class="writing-card-desc">
+                            Brunello Cucinelli charges more than comparable luxury houses,
+                            never discounts, produces below demand, and restores a medieval
+                            village out of company profits. This paper asks how that is a
+                            business model — and why it works.
+                        </p>
+                        <span class="writing-card-arrow">Read summary →</span>
+                    </div>
+
+                    <!-- AMOUAGE -->
+                    <div class="writing-card" onclick="openModal('amouage')" role="button" tabindex="0">
+                        <span class="writing-card-badge">Group Paper · NEOMA Business School</span>
+                        <div class="writing-card-title">Amouage: Entering the Indian Luxury Fragrance Market</div>
+                        <div class="writing-card-meta">International Luxury Strategy</div>
+                        <p class="writing-card-desc">
+                            Amouage sits above Chanel in price. India has one of the world's
+                            oldest fragrance cultures. This paper is a market entry strategy
+                            for the intersection.
+                        </p>
+                        <span class="writing-card-arrow">Read summary →</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ── CONTACT ───────────────────────────── -->
+    <section id="contact">
+        <div class="section-inner">
+            <span class="section-label">06 · Contact</span>
+            <h2>Let's<br><em>talk.</em></h2>
+            <p class="contact-sub">
+                Open to internship opportunities in luxury, beauty, perfume,
+                and accessories. Based in Paris, available immediately.
+            </p>
+            <a href="mailto:nakshatra.sane@gmail.com" class="contact-email">
+                nakshatra.sane@gmail.com
+            </a>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/nakshatra-sane/" class="contact-link" target="_blank" rel="noopener">
+                    LinkedIn →
+                </a>
+                <a href="#" class="contact-link">
+                    <!-- Replace href="#" with link to your CV PDF -->
+                    Download CV ↓
+                </a>
+            </div>
+            <div class="footer-bar">
+                <span class="footer-copy">© 2026 Nakshatra Sane</span>
+                <span class="footer-copy">Paris · MMXXVI</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ── MODAL OVERLAY ──────────────────────── -->
+    <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-panel" id="modal-panel" onclick="event.stopPropagation()">
+            <div class="modal-top-bar">
+                <span class="modal-num" id="modal-top-num"></span>
+                <button class="modal-close-btn" onclick="closeModal()">✕ &nbsp;Close</button>
+            </div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+
+    <!-- ── MODAL DATA (hidden) ────────────────── -->
+
+    <!-- MFK -->
+    <div id="modal-data-mkf" style="display:none">
+        <span class="modal-num">CS · 01 · NEOMA Business School · Solo Project</span>
+        <div class="modal-house">Maison Francis Kurkdjian</div>
+        <div class="modal-type">Experiential Storytelling Strategy</div>
+
+        <span class="modal-section-label">What I did</span>
+        <p class="modal-text">
+            Developed a full experiential storytelling campaign for Maison Francis Kurkdjian,
+            titled <em>COMPOSED.</em> Three deliverables: a campaign film — <em>The First Note</em>
+            — following Francis through a day built on scent, music, and movement; a
+            reservation-only multi-sensory pop-up in Paris; and a limited-edition collaboration
+            with Cédric Grolet at Versailles where five MFK fragrances were translated into
+            haute desserts. Solo project from brief to final delivery.
+        </p>
+
+        <span class="modal-section-label">How I did it</span>
+        <p class="modal-text">
+            Started by researching everything Francis Kurkdjian has said publicly about his
+            creative process. Found a YouTube podcast where he names his three passions —
+            ballet, piano, and perfumery — and the parallel clicked immediately: every art form
+            he loves is built around <em>notes.</em> Brand research via YouTube and Instagram.
+            Visual development via Pinterest. The Cédric Grolet pairing came from mapping
+            the only other craft that consistently compares perfumery to composition:
+            haute pâtisserie.
+        </p>
+
+        <div class="modal-concept">
+            <span class="modal-concept-label">The core concept</span>
+            <div class="modal-concept-text">
+                COMPOSED — a campaign that treats Francis as the author and the fragrance as
+                a composition. The product becomes secondary; the maker becomes the story.
+            </div>
+        </div>
+
+        <a href="MFK_Storytelling_Campaign.pdf" class="modal-cta" target="_blank" rel="noopener">
+            View case study PDF →
+        </a>
+    </div>
+
+    <!-- DIOR -->
+    <div id="modal-data-dior" style="display:none">
+        <span class="modal-num">CS · 02 · NEOMA × Christian Dior Couture · Group Project</span>
+        <div class="modal-house">Christian Dior Couture</div>
+        <div class="modal-type">360° Go-to-Market Strategy</div>
+
+        <span class="modal-section-label">What I did</span>
+        <p class="modal-text">
+            Part of a student team that developed a 360° GTM strategy for the South Asian
+            launch of Dior Menswear Winter 2026, a collection inspired by Paul Poiret. The
+            region was too culturally diverse for a unified rollout: the team designed
+            simultaneous city-specific activations across Bangkok, Ho Chi Minh City, New Delhi,
+            and Sydney, each with a distinct experiential concept. Presented at Christian Dior
+            Couture HQ, Paris, among 14 international competing teams.
+        </p>
+
+        <span class="modal-section-label">My contribution</span>
+        <p class="modal-text">
+            Within the group, I owned the full 360° execution plan — mapping every touchpoint
+            across OOH, pop-up, VR/AR, influencer strategy, and private styling events, and
+            ensuring the Poiret reference translated coherently across four distinct cultural
+            contexts. I also produced the campaign presentation video independently, from
+            brief to final cut.
+        </p>
+
+        <div class="modal-concept">
+            <span class="modal-concept-label">The core concept</span>
+            <div class="modal-concept-text">
+                Cultural specificity over regional generalisation. Poiret's exoticism reread
+                through contemporary South Asian luxury codes — differently in each city.
+            </div>
+        </div>
+
+        <a href="Dior_GTM_Strategy.pdf" class="modal-cta" target="_blank" rel="noopener">
+            View case study PDF →
+        </a>
+    </div>
+
+    <!-- BOUCHERON -->
+    <div id="modal-data-boucheron" style="display:none">
+        <span class="modal-num">CS · 03 · Self-Initiated · 2026 · Solo Project</span>
+        <div class="modal-house">Boucheron</div>
+        <div class="modal-type">Social Media Audit and Campaign Strategy</div>
+
+        <span class="modal-section-label">What I did</span>
+        <p class="modal-text">
+            Self-initiated project. Ran a full social media audit of Boucheron across Instagram,
+            TikTok, and Pinterest, benchmarked against Cartier, Van Cleef &amp; Arpels, Bulgari,
+            and Tiffany. Built a six-priority campaign strategy from the findings.
+        </p>
+
+        <span class="modal-section-label">What the audit found</span>
+        <p class="modal-text">
+            A 1.4% engagement rate — three times the sector average — alongside a near-absent
+            TikTok strategy and 168 years of archive content left completely unused. The brand
+            with the best raw material had the most underexploited social presence in luxury
+            jewellery. The campaign strategy addressed six priorities: a savoir-faire content
+            series, a heritage archive format, a sustainability narrative around 100% traceable
+            diamonds, and a structured TikTok entry plan.
+        </p>
+
+        <div class="modal-concept">
+            <span class="modal-concept-label">The core finding</span>
+            <div class="modal-concept-text">
+                The brand with the strongest archive and the highest organic engagement rate
+                in the sector was the one investing the least in unlocking either.
+            </div>
+        </div>
+
+        <a href="#" class="modal-cta">
+            View audit PDF →
+        </a>
+        <span class="modal-cta-note">PDF upload in progress.</span>
+    </div>
+
+    <!-- JACQUEMUS -->
+    <div id="modal-data-jacquemus" style="display:none">
+        <span class="modal-num">CS · 04 · Self-Initiated · In Progress · Solo Project</span>
+        <div class="modal-house">Jacquemus</div>
+        <div class="modal-type">Brand Extension Strategy · Fragrance Launch · Miami 2027</div>
+
+        <span class="modal-section-label">What I did</span>
+        <p class="modal-text">
+            Self-initiated brand extension strategy brief. Identified fragrance as Jacquemus's
+            confirmed next category — based on the L'Oréal Luxe partnership announced in
+            February 2025 and Simon Porte Jacquemus's public confirmation of a 2027 launch
+            in GQ France. Developed a full fragrance concept (name, notes, packaging) and
+            designed a PR launch package and immersive pop-up activation for Miami.
+        </p>
+
+        <span class="modal-section-label">How I did it</span>
+        <p class="modal-text">
+            Signal-based research. The Jacquemus × Trudon candle documented Simon's nose
+            (bergamot, blackcurrant, jasmine). The Le Bonheur SS27 collection signalled
+            citrus, warmth, Provençal terroir. No publication predicted immortelle — the most
+            geographically specific, most expensive note of the Provençal garrigue, and the
+            one that would make this fragrance genuinely unmistakable. The fragrance was
+            anchored at Salon-de-Provence (43°N · 5°E), Simon's birthplace — biographical
+            fact, not prediction.
+        </p>
+
+        <span class="modal-section-label">The pop-up concept</span>
+        <p class="modal-text">
+            Four rooms in a Wynwood warehouse — each room is one time of day in Salon-de-Provence,
+            each corresponding to one layer of the fragrance. Guests exit with a bottle personalised
+            with the timestamp of the room they stayed in longest. <em>17:00 · 43°N · 5°E.</em>
+            The time they were happiest.
+        </p>
+
+        <div class="modal-concept">
+            <span class="modal-concept-label">The name and the campaign line</span>
+            <div class="modal-concept-text">
+                43°N · 5°E &nbsp;—&nbsp;
+                "Le bonheur n'a pas de nom. Il a des coordonnées."
+            </div>
+        </div>
+
+        <a href="#" class="modal-cta">
+            View project brief →
+        </a>
+        <span class="modal-cta-note">Full PDF in progress.</span>
+    </div>
+
+    <!-- L'ORÉAL -->
+    <div id="modal-data-loreal" style="display:none">
+        <span class="modal-num">CS · 05 · L'Oréal Brandstorm · Group Project (3 people)</span>
+        <div class="modal-house">L'Oréal Luxe</div>
+        <div class="modal-type">Product Innovation Pitch · Brandstorm Competition</div>
+
+        <span class="modal-section-label">What I did</span>
+        <p class="modal-text">
+            Developed ScentSync — an AI-personalised fragrance device pitched at L'Oréal
+            Brandstorm. The device adapts scent delivery dynamically based on mood, context,
+            and time of day. Within a three-person team, I developed the AI personalisation
+            mechanic (micro-encapsulation technology), the full business model (€450 device,
+            €60/month refill subscription, 56% gross margins), the three-phase global rollout
+            strategy across Europe, the Middle East, and Asia, and all three pitch slides.
+        </p>
+
+        <span class="modal-section-label">How I did it</span>
+        <p class="modal-text">
+            Trend analysis identified the gap: no player owned gender-neutral premium beauty
+            tech between mass fragrance and luxury niche. Platform research validated
+            willingness-to-pay among Gen Z and millennial segments. I built the financial
+            model and designed the pitch independently, while teammates validated the core
+            opportunity and contributed to market sizing.
+        </p>
+
+        <div class="modal-concept">
+            <span class="modal-concept-label">The core concept</span>
+            <div class="modal-concept-text">
+                The fragrance adapts to you. Premium positioning through personalisation
+                technology rather than heritage narrative.
+            </div>
+        </div>
+
+        <a href="LOreal_Brandstorm_ScentSync.pdf" class="modal-cta" target="_blank" rel="noopener">
+            View pitch PDF →
+        </a>
+    </div>
+
+    <!-- DISSERTATION -->
+    <div id="modal-data-diss" style="display:none">
+        <span class="modal-num">Dissertation · MSc Luxury Marketing · NEOMA Business School</span>
+        <div class="modal-house">Why is Gen Z Disappointed in Luxury Brands?</div>
+        <div class="modal-type">Solo · 2025–2026</div>
+
+        <span class="modal-section-label">Research summary</span>
+        <p class="modal-text">
+            The dissertation examines the growing tension between Gen Z's stated values and
+            luxury brand behaviour. Three core sources of disillusionment emerged: the
+            <em>sustainability performance gap</em> (brands claiming environmental commitment
+            while driving volume growth), the <em>authenticity paradox</em> (brands presenting
+            handcraft codes while outsourcing production at scale), and the
+            <em>inclusivity contradiction</em> (brands deploying diversity imagery while
+            retaining selective pricing that excludes the demographic they're addressing).
+        </p>
+        <p class="modal-text">
+            Gen Z's disappointment is not irrational — it reflects a cohort raised to detect
+            greenwashing, performative diversity, and brand-as-content over brand-as-craft.
+            The research concludes that credibility with the under-30 consumer cannot be
+            communicated. It has to be demonstrated. Strategic recommendations centre on
+            radical transparency, earned authority through practice, and storytelling that
+            leads with action rather than promise.
+        </p>
+
+        <a href="#" class="modal-cta">
+            Read the summary PDF →
+        </a>
+        <span class="modal-cta-note">PDF upload in progress.</span>
+    </div>
+
+    <!-- BRUNELLO CUCINELLI -->
+    <div id="modal-data-brunello" style="display:none">
+        <span class="modal-num">Solo Paper · NEOMA Business School · Business Models in Luxury</span>
+        <div class="modal-house">Brunello Cucinelli:<br>The Business of Radical Humanity</div>
+        <div class="modal-type">Business Models in Luxury</div>
+
+        <span class="modal-section-label">Paper summary</span>
+        <p class="modal-text">
+            Analysis of Brunello Cucinelli's model as a case study in what the paper calls
+            <em>humanistic capitalism</em> — the argument that profitability and ethical conduct
+            are not in conflict but are structurally interlinked. The model rests on five
+            pillars: restrained growth (revenue targets set below capability), a no-discount
+            policy (price integrity as brand integrity), wages that exceed Italian statutory
+            requirements, the Solomeo village restoration project (cultural philanthropy as
+            brand investment), and total vertical integration.
+        </p>
+        <p class="modal-text">
+            The paper argues that Cucinelli's model resists the conglomerate growth-at-scale
+            logic not because it is naïve about commercial imperatives — but because it has
+            correctly identified that brand desirability erodes in direct proportion to the
+            speed and volume of production growth. The model is self-limiting by design.
+            That self-limitation is what makes it commercially durable.
+        </p>
+
+        <a href="#" class="modal-cta">
+            Read the paper PDF →
+        </a>
+        <span class="modal-cta-note">PDF upload in progress.</span>
+    </div>
+
+    <!-- AMOUAGE -->
+    <div id="modal-data-amouage" style="display:none">
+        <span class="modal-num">Group Paper · NEOMA Business School · International Luxury Strategy</span>
+        <div class="modal-house">Amouage: Entering the Indian Luxury Fragrance Market</div>
+        <div class="modal-type">International Luxury Strategy</div>
+
+        <span class="modal-section-label">Paper summary</span>
+        <p class="modal-text">
+            Market entry strategy for Amouage — the Omani ultra-luxury fragrance house priced
+            above Chanel — expanding into India's premium fragrance segment. The paper opens
+            with India's fragrance paradox: one of the world's oldest olfactive cultures (attar,
+            Mughal perfumery) with a contemporary premium market still dominated by European
+            houses lacking cultural specificity.
+        </p>
+        <p class="modal-text">
+            Amouage faces three structural barriers: fragrance literacy in the premium segment
+            (consumers recognise brand names but lack vocabulary for niche categories),
+            distribution scarcity (no selective multi-brand retail comparable to Printemps
+            exists in India's tier-1 cities), and price perception (Amouage's positioning
+            above Dior requires a credibility framework not yet established in the market).
+            The proposed entry model is phased: first-year presence via Taj Group boutiques
+            and selective airports (full margin control, zero wholesale); year two, a flagship
+            concept in Mumbai or Delhi; year three, digital community building through India's
+            growing fragrance enthusiast networks. The cultural bridge: shared olfactive
+            heritage between the Arabian Gulf and the subcontinent — oud, rose, incense.
+        </p>
+
+        <a href="#" class="modal-cta">
+            Read the paper PDF →
+        </a>
+        <span class="modal-cta-note">PDF upload in progress.</span>
+    </div>
+
+
+    <!-- CERT: LVMH -->
+    <div id="modal-data-cert-lvmh" style="display:none">
+        <span class="modal-num">Certification · LVMH Group · Dec 2025</span>
+        <div class="modal-house">Inside LVMH</div>
+        <div class="modal-type">Online Certificate Programme · LVMH Group</div>
+        <img src="cert-lvmh-1.png" alt="Inside LVMH Certificate" style="width:100%;border-radius:2px;margin:1.5rem 0;">
+        <span class="modal-section-label">What I learned</span>
+        <p class="modal-text">
+            Completed LVMH's flagship online programme covering the group's 75+ maisons across wine
+            and spirits, fashion and leather goods, perfumes and cosmetics, watches and jewellery,
+            and selective retailing — building a precise vocabulary for how luxury conglomerates
+            manage brand equity while keeping each house architecturally distinct.
+        </p>
+        <p class="modal-text">
+            Gained insight into how LVMH balances heritage with creative renewal across radically
+            different product categories, and how the group's selective distribution strategy
+            protects desirability at scale — a core tension in modern luxury management.
+        </p>
+        <p class="modal-text">
+            Developed an understanding of sustainability as a competitive imperative inside luxury
+            conglomerates: how LVMH's LIFE 360 programme integrates environmental goals into brand
+            strategy without compromising on craftsmanship narratives or perceived exclusivity.
+        </p>
+    </div>
+
+    <!-- CERT: L'ORÉAL BRANDSTORM -->
+    <div id="modal-data-cert-loreal" style="display:none">
+        <span class="modal-num">Certification · L'Oréal · 2025</span>
+        <div class="modal-house">L'Oréal Brandstorm</div>
+        <div class="modal-type">International Innovation Competition · L'Oréal Group</div>
+        <img src="cert-loreal-cert-1.png" alt="L'Oréal Brandstorm Certificate" style="width:100%;border-radius:2px;margin:1.5rem 0;">
+        <span class="modal-section-label">What I learned</span>
+        <p class="modal-text">
+            Competed in L'Oréal Brandstorm, the group's global student innovation challenge, where
+            teams pitch original brand or product concepts to senior L'Oréal executives. The process
+            demanded working under tight competitive constraints — defining a real consumer insight,
+            validating it, and translating it into a commercially credible pitch.
+        </p>
+        <p class="modal-text">
+            The experience sharpened my understanding of how large beauty conglomerates evaluate
+            brand ideas: not just creative differentiation, but market sizing, channel strategy, and
+            coherence with an existing portfolio. It forced precision in how I frame a brand proposition.
+        </p>
+        <p class="modal-text">
+            Working in a cross-cultural team taught me how to synthesise divergent perspectives into
+            a single cohesive narrative under pressure — exactly the skill required when pitching
+            to a room of decision-makers who have seen every kind of beauty concept before.
+        </p>
+    </div>
+
+    <!-- CERT: SUSTAINABLE FASHION -->
+    <div id="modal-data-cert-sustain" style="display:none">
+        <span class="modal-num">Certification · Copenhagen Business School · Jan 2026</span>
+        <div class="modal-house">Sustainable Fashion</div>
+        <div class="modal-type">Online Certificate · Copenhagen Business School via Coursera</div>
+        <img src="cert-3-1.png" alt="Sustainable Fashion Certificate" style="width:100%;border-radius:2px;margin:1.5rem 0;">
+        <span class="modal-section-label">What I learned</span>
+        <p class="modal-text">
+            Studied the full lifecycle of fashion — from raw material extraction through design,
+            production, distribution, and end-of-life — with a rigorous focus on where the
+            industry's environmental and social costs are concentrated and which interventions
+            actually move the needle versus those that are primarily reputational.
+        </p>
+        <p class="modal-text">
+            Examined how leading brands navigate the tension between growth and sustainability:
+            why overproduction is structurally incentivised, how circular business models are
+            being tested at scale, and what "sustainable luxury" means when most luxury houses
+            still rely on exotic materials and intercontinental supply chains.
+        </p>
+        <p class="modal-text">
+            Developed a critical lens for greenwashing — the ability to distinguish between
+            genuine systemic change and performative ESG communication. This directly informs how
+            I evaluate brand strategy: sustainability claims need to be substantiated at the
+            product and supply chain level, not just in campaign copy.
+        </p>
+    </div>
+
+
+    <!-- ── JAVASCRIPT ──────────────────────────── -->
+    <script>
+        /* ---- Eraser canvas reveal (work grid) ---- */
+        (function () {
+            const canvas = document.getElementById('eraser-canvas');
+            const hint   = document.getElementById('eraser-hint-text');
+            const hintEl = document.getElementById('eraser-hint');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            let erased      = false;
+            let lastX       = null, lastY = null;
+            let swipeCount  = 0;     // increments on each mouseup/touchend after real movement
+            let movedInSwipe = false; // did the cursor actually move in this press?
+
+            /* Fill with parchment overlay */
+            function fill() {
+                canvas.width  = canvas.offsetWidth  || canvas.parentElement.offsetWidth;
+                canvas.height = canvas.offsetHeight || canvas.parentElement.offsetHeight;
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.fillStyle = '#FAF7F2';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+            fill();
+            window.addEventListener('resize', () => { if (!erased) fill(); });
+
+            /* Soft brush */
+            function erasAt(x, y) {
+                const r = Math.max(110, canvas.width * 0.13);
+                ctx.globalCompositeOperation = 'destination-out';
+                const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+                g.addColorStop(0,   'rgba(0,0,0,1)');
+                g.addColorStop(0.5, 'rgba(0,0,0,0.9)');
+                g.addColorStop(1,   'rgba(0,0,0,0)');
+                ctx.fillStyle = g;
+                ctx.beginPath();
+                ctx.arc(x, y, r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            /* Smooth fade-out */
+            function autoReveal() {
+                if (erased) return;
+                erased = true;
+                canvas.style.transition = 'opacity 1s ease';
+                canvas.style.opacity = '0';
+                if (hint) { hint.style.transition = 'opacity 0.3s'; hint.style.opacity = '0'; }
+                setTimeout(() => {
+                    canvas.style.display = 'none';
+                    if (hintEl) hintEl.style.display = 'none';
+                }, 1050);
+            }
+
+            /* Paint along cursor path */
+            function track(x, y) {
+                if (erased) return;
+                if (hint && hint.style.opacity !== '0') hint.style.opacity = '0';
+                if (lastX !== null) {
+                    const dx = x - lastX, dy = y - lastY;
+                    const seg = Math.sqrt(dx * dx + dy * dy);
+                    const steps = Math.max(1, Math.floor(seg / 6));
+                    for (let i = 0; i <= steps; i++) {
+                        erasAt(lastX + dx * i / steps, lastY + dy * i / steps);
+                    }
+                    if (seg > 2) movedInSwipe = true;
+                } else {
+                    erasAt(x, y);
+                }
+                lastX = x; lastY = y;
+            }
+
+            /* Count a swipe when mouse/finger lifts after real movement */
+            function endSwipe() {
+                lastX = null; lastY = null;
+                if (!movedInSwipe || erased) { movedInSwipe = false; return; }
+                movedInSwipe = false;
+                swipeCount++;
+                if (swipeCount >= 3) autoReveal();
+            }
+
+            /* Mouse */
+            canvas.addEventListener('mouseenter', () => { lastX = null; lastY = null; movedInSwipe = false; });
+            canvas.addEventListener('mousemove', e => {
+                const r = canvas.getBoundingClientRect();
+                track(e.clientX - r.left, e.clientY - r.top);
+            });
+            canvas.addEventListener('mouseleave', endSwipe);
+            canvas.addEventListener('mouseup',    endSwipe);
+
+            /* Touch */
+            canvas.addEventListener('touchstart', e => {
+                e.preventDefault();
+                lastX = null; lastY = null; movedInSwipe = false;
+                const r = canvas.getBoundingClientRect();
+                track(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
+            }, { passive: false });
+            canvas.addEventListener('touchmove', e => {
+                e.preventDefault();
+                const r = canvas.getBoundingClientRect();
+                track(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
+            }, { passive: false });
+            canvas.addEventListener('touchend', endSwipe);
+        })();
+
+        /* ---- Drag-to-scroll on work strip ---- */
+        (function () {
+            const wrap = document.getElementById('workScroll');
+            if (!wrap) return;
+            let isDown = false, startX, scrollLeft;
+
+            wrap.addEventListener('mousedown', e => {
+                isDown = true;
+                wrap.classList.add('is-dragging');
+                startX    = e.pageX - wrap.offsetLeft;
+                scrollLeft = wrap.scrollLeft;
+            });
+            wrap.addEventListener('mouseleave', () => { isDown = false; wrap.classList.remove('is-dragging'); });
+            wrap.addEventListener('mouseup',    () => { isDown = false; wrap.classList.remove('is-dragging'); });
+            wrap.addEventListener('mousemove',  e => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x    = e.pageX - wrap.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                wrap.scrollLeft = scrollLeft - walk;
+            });
+        })();
+
+        /* ---- Modal system ---- */
+        function openModal(id) {
+            const data = document.getElementById('modal-data-' + id);
+            const panel = document.getElementById('modal-panel');
+            const body  = document.getElementById('modal-body');
+            const overlay = document.getElementById('modal-overlay');
+            const topNum = document.getElementById('modal-top-num');
+            if (!data) return;
+
+            body.innerHTML = data.innerHTML;
+            topNum.textContent = '';
+            overlay.classList.add('open');
+            panel.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            panel.scrollTop = 0;
+        }
+
+        function closeModal() {
+            const overlay = document.getElementById('modal-overlay');
+            const panel   = document.getElementById('modal-panel');
+            overlay.classList.remove('open');
+            panel.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        /* ---- Work card keyboard access ---- */
+        document.querySelectorAll('.work-card[onclick], .writing-card-featured[onclick], .writing-card[onclick]').forEach(function(card) {
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.click();
+                }
+            });
+        });
+
+        /* ---- Experience accordion ---- */
+        function toggleExp(e, btn) {
+            e.stopPropagation();
+            const item = btn.closest('.exp-item');
+            const isExpanded = item.classList.contains('expanded');
+            item.classList.toggle('expanded');
+            btn.textContent = isExpanded ? '+ View details' : '− View less';
+        }
+
+        /* ---- Cert accordion toggle symbol ---- */
+        document.querySelectorAll('.cert-accordion').forEach(function(el) {
+            el.addEventListener('toggle', function() {
+                const toggle = el.querySelector('.cert-accordion-toggle');
+                if (toggle) toggle.textContent = el.open ? '−' : '+';
+            });
+        });
+
+
+        /* ===================================================
+           ANIMATIONS
+        =================================================== */
+
+        /* ---- Custom cursor ---- */
+        (function() {
+            var dot  = document.getElementById('cursor-dot');
+            var ring = document.getElementById('cursor-ring');
+            if (!dot || !ring) return;
+
+            var mx = 0, my = 0, rx = 0, ry = 0, active = false;
+
+            document.addEventListener('mousemove', function(e) {
+                mx = e.clientX; my = e.clientY;
+                dot.style.left = mx + 'px';
+                dot.style.top  = my + 'px';
+                if (!active) {
+                    active = true;
+                    dot.style.opacity  = '1';
+                    ring.style.opacity = '1';
+                }
+            });
+
+            document.addEventListener('mouseleave', function() {
+                active = false;
+                dot.style.opacity  = '0';
+                ring.style.opacity = '0';
+            });
+
+            (function loop() {
+                rx += (mx - rx) * 0.1;
+                ry += (my - ry) * 0.1;
+                ring.style.left = rx + 'px';
+                ring.style.top  = ry + 'px';
+                requestAnimationFrame(loop);
+            })();
+
+            /* Hover expand on all clickable elements */
+            var targets = document.querySelectorAll(
+                '.work-card, .writing-card, .writing-card-featured, ' +
+                'a, button, [role="button"]'
+            );
+            targets.forEach(function(el) {
+                el.addEventListener('mouseenter', function() { ring.classList.add('cursor-hover'); });
+                el.addEventListener('mouseleave', function() { ring.classList.remove('cursor-hover'); });
+            });
+
+            /* Shrink dot on click */
+            document.addEventListener('mousedown', function() { dot.style.transform = 'translate(-50%,-50%) scale(0.6)'; });
+            document.addEventListener('mouseup',   function() { dot.style.transform = 'translate(-50%,-50%) scale(1)'; });
+        })();
+
+
+        /* ---- Wipe reveal (h1 + h2 headings) ---- */
+        (function() {
+            var darkSections = ['hero', 'work', 'writing'];
+
+            document.querySelectorAll('h1, h2').forEach(function(h) {
+                var section   = h.closest('section');
+                var sectionId = section ? section.id : '';
+                var isDark    = darkSections.indexOf(sectionId) > -1;
+
+                /* Wrap inner content + append wipe bar */
+                h.innerHTML = '<span class="wipe-inner">' + h.innerHTML + '</span>' +
+                              '<span class="wipe-bar" aria-hidden="true"></span>';
+                h.classList.add('wipe-host');
+                if (isDark) h.classList.add('dark');
+            });
+
+            var wipeObs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        wipeObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.25, rootMargin: '0px 0px -30px 0px' });
+
+            document.querySelectorAll('.wipe-host').forEach(function(el) {
+                wipeObs.observe(el);
+            });
+        })();
+
+
+        /* ---- Fade rise (cards, experience, writing, labels) ---- */
+        (function() {
+            var groups = [
+                { sel: '.work-card',             delay: 85  },
+                { sel: '.exp-item',              delay: 65  },
+                { sel: '.writing-card-featured', delay: 0   },
+                { sel: '.writing-card',          delay: 90  },
+                { sel: '.edu-item',              delay: 55  },
+                { sel: '.section-label',         delay: 0   },
+            ];
+
+            groups.forEach(function(g) {
+                document.querySelectorAll(g.sel).forEach(function(el, i) {
+                    el.classList.add('fade-rise');
+                    el.dataset.riseDelay = i * g.delay;
+                });
+            });
+
+            var fadeObs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var delay = parseInt(entry.target.dataset.riseDelay || '0');
+                        setTimeout(function() {
+                            entry.target.classList.add('visible');
+                        }, delay);
+                        fadeObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.07, rootMargin: '0px 0px -20px 0px' });
+
+            document.querySelectorAll('.fade-rise').forEach(function(el) {
+                fadeObs.observe(el);
+            });
+        })();
+
+    </script>
+
+</body>
+</html>
