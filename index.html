@@ -1100,13 +1100,33 @@
             nav { padding: 1.2rem 2rem; }
             .nav-links { display: none; }
             section { padding: 4.5rem 2rem; }
-            #hero { padding: 7rem 2rem 4rem; }
+            #hero {
+                padding: 7rem 2rem 4rem;
+                justify-content: flex-start;
+            }
+
+            /* Hero name visible immediately on mobile — hide canvas */
+            #eraser-canvas, #eraser-hint { display: none !important; }
+
+            /* Hero text centred on mobile */
+            .hero-content { text-align: left; }
+            .hero-name { font-size: clamp(3rem, 14vw, 5rem); }
+            .hero-tagline { font-size: 1rem; max-width: 100%; }
+            .hero-badge { font-size: 0.6rem; }
+            .hero-meta { gap: 0; }
 
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
             }
             .about-photo { aspect-ratio: 4/3; max-height: 380px; }
+
+            /* Work strip */
+            .work-header { padding: 4rem 2rem 1.5rem; }
+            .work-big-heading { font-size: clamp(3rem, 15vw, 5rem); }
+            .work-scroll-wrap { padding: 1rem 2rem 3rem; }
+            .work-hcard { width: 240px; }
+            .work-hcard-visual { height: 300px; }
 
             .work-grid { grid-template-columns: 1fr; }
             .work-card.featured {
@@ -1120,16 +1140,35 @@
                 gap: 0.6rem;
             }
 
+            /* Stats strip */
+            .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 0; }
+            .stat-item { padding: 1.5rem 1rem; border-right: 1px solid rgba(139,26,42,0.15); text-align: center; }
+            .stat-item:nth-child(2) { border-right: none; }
+            .stat-item:nth-child(3) { border-top: 1px solid rgba(139,26,42,0.15); }
+            .stat-item:nth-child(4) { border-top: 1px solid rgba(139,26,42,0.15); border-right: none; }
+            .stat-item:first-child { text-align: center; padding-left: 1rem; }
+
+            /* Education */
             .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .edu-photo-col { display: none; }
+
+            /* Certs */
+            .cert-img-grid { grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+
+            /* Writing */
+            .writing-papers { grid-template-columns: 1fr; }
+            .writing-card-featured { grid-template-columns: 1fr; }
 
             .footer-bar { flex-direction: column; gap: 0.8rem; text-align: center; }
         }
 
         @media (max-width: 480px) {
-            #hero { padding: 7rem 1.5rem 4rem; }
+            #hero { padding: 6rem 1.5rem 3rem; }
             section { padding: 4rem 1.5rem; }
             nav { padding: 1.1rem 1.5rem; }
-            .contact-links { gap: 1.5rem; }
+            .contact-links { gap: 1.5rem; flex-direction: column; align-items: center; }
+            .cert-img-grid { grid-template-columns: 1fr; }
+            .stat-number { font-size: 2.5rem; }
         }
 
 
