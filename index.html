@@ -209,10 +209,7 @@
             text-align: right;
         }
 
-        @media (max-width: 900px) {
-            .hero-inner { grid-template-columns: 1fr; }
-            .hero-portrait { display: none; }
-        }
+
 
         .hero-badge {
             display: inline-flex;
@@ -504,13 +501,7 @@
             color: var(--gold-light);
         }
 
-        @media (max-width: 900px) {
-            .work-big-heading { font-size: clamp(3.5rem, 12vw, 6rem); }
-            .work-scroll-wrap { padding: 1.5rem 1.5rem 4rem; }
-            .work-header { padding: 5rem 1.5rem 2rem; }
-            .work-hcard { width: 260px; }
-            .work-hcard-visual { height: 340px; }
-        }
+
 
         /* keep old heading rule for other sections */
         #work > .section-inner > h2 {
@@ -776,14 +767,7 @@
             .moment-item { height: 320px; }
         }
 
-        @media (max-width: 900px) {
-            .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 0; }
-            .stat-item:nth-child(2) { border-right: none; }
-            .stat-item:nth-child(3) { border-right: 1px solid rgba(139,26,42,0.15); border-top: 1px solid rgba(139,26,42,0.15); }
-            .stat-item:nth-child(4) { border-top: 1px solid rgba(139,26,42,0.15); }
-            .stat-item:first-child { text-align: center; padding-left: 2rem; }
-            .stats-strip { padding: 3rem 2rem; }
-        }
+
 
 
         /* ===========================
@@ -1004,9 +988,7 @@
 
         .cert-img-caption { padding-top: 0.6rem; }
 
-        @media (max-width: 900px) {
-            .cert-img-grid { grid-template-columns: 1fr 1fr; }
-        }
+
 
 
         /* ===========================
@@ -1094,59 +1076,125 @@
 
 
         /* ===========================
-           RESPONSIVE
+           HAMBURGER NAV
+        =========================== */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 200;
+        }
+        .nav-hamburger span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--espresso);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+        .nav-drawer {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: var(--parchment);
+            z-index: 99;
+            padding: 5rem 2rem 2.5rem;
+            border-bottom: 1px solid rgba(139,26,42,0.18);
+            transform: translateY(-100%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-drawer.open { transform: translateY(0); }
+
+        .nav-drawer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .nav-drawer-links li {
+            border-bottom: 1px solid rgba(139,26,42,0.1);
+        }
+        .nav-drawer-links a {
+            display: block;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            color: var(--espresso);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        .nav-drawer-cta {
+            display: inline-block;
+            margin-top: 1.8rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+        }
+
+        /* ===========================
+           RESPONSIVE — TABLET (≤900px)
         =========================== */
         @media (max-width: 900px) {
+            /* Nav */
             nav { padding: 1.2rem 2rem; }
             .nav-links { display: none; }
+            .nav-cta-desktop { display: none; }
+            .nav-hamburger { display: flex; }
+            .nav-drawer { display: block; }
+
+            /* Base */
             section { padding: 4.5rem 2rem; }
-            #hero {
-                padding: 7rem 2rem 4rem;
-                justify-content: flex-start;
-            }
 
-            /* Hero name visible immediately on mobile — hide canvas */
+            /* Hero */
+            #hero { padding: 6.5rem 2rem 4rem; }
             #eraser-canvas, #eraser-hint { display: none !important; }
-
-            /* Hero text centred on mobile */
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-portrait { display: none; }
             .hero-content { text-align: left; }
-            .hero-name { font-size: clamp(3rem, 14vw, 5rem); }
+            .hero-name { font-size: clamp(3.2rem, 13vw, 5.5rem); }
             .hero-tagline { font-size: 1rem; max-width: 100%; }
             .hero-badge { font-size: 0.6rem; }
             .hero-meta { gap: 0; }
+            .hero-meta-item { padding-right: 2rem; }
 
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-            .about-photo { aspect-ratio: 4/3; max-height: 380px; }
+            /* About */
+            .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .about-photo { aspect-ratio: 4/3; max-height: 340px; }
 
-            /* Work strip */
+            /* Work */
             .work-header { padding: 4rem 2rem 1.5rem; }
-            .work-big-heading { font-size: clamp(3rem, 15vw, 5rem); }
+            .work-big-heading { font-size: clamp(3rem, 14vw, 5rem); }
             .work-scroll-wrap { padding: 1rem 2rem 3rem; }
-            .work-hcard { width: 240px; }
-            .work-hcard-visual { height: 300px; }
-
+            .work-hcard { width: 260px; }
+            .work-hcard-visual { height: 330px; }
             .work-grid { grid-template-columns: 1fr; }
-            .work-card.featured {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .work-card.featured { grid-template-columns: 1fr; gap: 2rem; }
             .work-card-visual { height: 180px; }
 
-            .exp-item {
-                grid-template-columns: 1fr;
-                gap: 0.6rem;
-            }
+            /* Experience */
+            .exp-item { grid-template-columns: 1fr; gap: 0.4rem; }
 
-            /* Stats strip */
+            /* Stats */
+            .stats-strip { padding: 3rem 2rem; }
             .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 0; }
-            .stat-item { padding: 1.5rem 1rem; border-right: 1px solid rgba(139,26,42,0.15); text-align: center; }
+            .stat-item { padding: 1.5rem 1rem; text-align: center; border-right: 1px solid rgba(139,26,42,0.15); }
             .stat-item:nth-child(2) { border-right: none; }
-            .stat-item:nth-child(3) { border-top: 1px solid rgba(139,26,42,0.15); }
+            .stat-item:nth-child(3) { border-top: 1px solid rgba(139,26,42,0.15); border-right: 1px solid rgba(139,26,42,0.15); }
             .stat-item:nth-child(4) { border-top: 1px solid rgba(139,26,42,0.15); border-right: none; }
-            .stat-item:first-child { text-align: center; padding-left: 1rem; }
 
             /* Education */
             .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1159,16 +1207,21 @@
             .writing-papers { grid-template-columns: 1fr; }
             .writing-card-featured { grid-template-columns: 1fr; }
 
+            /* Footer */
             .footer-bar { flex-direction: column; gap: 0.8rem; text-align: center; }
         }
 
+        /* ===========================
+           RESPONSIVE — PHONE (≤480px)
+        =========================== */
         @media (max-width: 480px) {
-            #hero { padding: 6rem 1.5rem 3rem; }
+            nav { padding: 1rem 1.5rem; }
             section { padding: 4rem 1.5rem; }
-            nav { padding: 1.1rem 1.5rem; }
-            .contact-links { gap: 1.5rem; flex-direction: column; align-items: center; }
-            .cert-img-grid { grid-template-columns: 1fr; }
+            #hero { padding: 5.5rem 1.5rem 3.5rem; }
+            .hero-name { font-size: clamp(2.8rem, 14vw, 4.5rem); }
             .stat-number { font-size: 2.5rem; }
+            .cert-img-grid { grid-template-columns: 1fr; }
+            .contact-links { flex-direction: column; align-items: center; gap: 1.5rem; }
         }
 
 
@@ -1306,10 +1359,7 @@
             padding-top: 1rem;
         }
 
-        @media (max-width: 700px) {
-            .writing-papers { grid-template-columns: 1fr; }
-            .writing-card-featured { grid-template-columns: 1fr; }
-        }
+
 
         .writing-card-featured,
         .writing-card { cursor: pointer; }
@@ -1862,8 +1912,23 @@
             <li><a href="#writing">Writing</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="nav-cta">Available · Paris 2026</a>
+        <a href="#contact" class="nav-cta nav-cta-desktop">Available · Paris 2026</a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+    <!-- Mobile nav drawer -->
+    <div class="nav-drawer" id="nav-drawer">
+        <ul class="nav-drawer-links">
+            <li><a href="#about" onclick="closeDrawer()">About</a></li>
+            <li><a href="#work" onclick="closeDrawer()">Work</a></li>
+            <li><a href="#experience" onclick="closeDrawer()">Experience</a></li>
+            <li><a href="#education" onclick="closeDrawer()">Education</a></li>
+            <li><a href="#writing" onclick="closeDrawer()">Writing</a></li>
+            <li><a href="#contact" onclick="closeDrawer()">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-drawer-cta" onclick="closeDrawer()">Available · Paris 2026</a>
+    </div>
 
 
     <!-- ── HERO ─────────────────────────────── -->
@@ -3209,6 +3274,26 @@
             });
         })();
 
+    </script>
+
+    <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('nav-hamburger');
+    const drawer = document.getElementById('nav-drawer');
+    function closeDrawer() {
+        hamburger.classList.remove('open');
+        drawer.classList.remove('open');
+    }
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        drawer.classList.toggle('open');
+    });
+    // Close drawer on outside click
+    document.addEventListener('click', e => {
+        if (!drawer.contains(e.target) && !hamburger.contains(e.target)) {
+            closeDrawer();
+        }
+    });
     </script>
 </body>
 </html>
