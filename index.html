@@ -187,12 +187,15 @@ section {
    HERO
 ===================================================== */
 #hero {
-    min-height: 100svh;
-    background-color: var(--espresso);
+    height: 100svh;
+    background-color: var(--parchment);
     padding: 0;
     position: relative;
     overflow: hidden;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #hero::after {
@@ -204,12 +207,13 @@ section {
     z-index: 2;
 }
 
+/* Mobile: contain the full image — no cropping, no overflow */
 .hero-hello-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     z-index: 1;
     display: block;
@@ -1976,6 +1980,20 @@ section {
 
     #eraser-canvas { display: block !important; }
     #eraser-hint   { display: flex !important; }
+
+    /* Desktop: full-bleed hero for the eraser reveal */
+    #hero {
+        min-height: 100svh;
+        background-color: var(--espresso);
+    }
+    .hero-hello-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 
     .work-header { padding: 6rem var(--pad-x) 2.5rem; }
     .work-hcard { width: 310px; }
