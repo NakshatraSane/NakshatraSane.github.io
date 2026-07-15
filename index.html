@@ -187,9 +187,9 @@ section {
    HERO
 ===================================================== */
 #hero {
-    /* Mobile: height = image height, zero negative space */
+    /* Mobile: push below fixed nav, height = image height */
     background-color: var(--parchment);
-    padding: 0;
+    padding: var(--nav-h) 0 0;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -352,7 +352,7 @@ section {
 ===================================================== */
 .stats-strip {
     background: var(--parchment-dark);
-    padding: 2.5rem var(--pad-x);
+    padding: 1.5rem var(--pad-x);
     border-bottom: 1px solid rgba(139,26,42,0.1);
 }
 
@@ -365,7 +365,7 @@ section {
 }
 
 .stat-item {
-    padding: 1.2rem 0.8rem;
+    padding: 0.9rem 0.8rem;
     text-align: center;
     border-right: 1px solid rgba(139,26,42,0.15);
     min-width: 0;
@@ -1979,6 +1979,7 @@ section {
     /* Desktop: full-bleed hero for the eraser reveal */
     #hero {
         height: 100svh;
+        padding: 0;
         background-color: var(--espresso);
     }
     .hero-hello-img {
